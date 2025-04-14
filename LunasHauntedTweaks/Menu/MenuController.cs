@@ -1,4 +1,4 @@
-﻿using HMMLunasTweaks.Utils;
+using HMMLunasTweaks.Utils;
 using UnityEngine;
 
 namespace HMMLunasTweaks.Menu
@@ -196,9 +196,11 @@ namespace HMMLunasTweaks.Menu
 
             go.transform.SetParent(this.gameObject.transform);
             go.transform.localScale = new Vector3(1.8f, 3.5f, 0.05f);
-
+            
+            go.GetComponent<Renderer>().material.color = Color.black;
+            
             go.AddComponent<MenuView>();
-
+            
             go.SetActive(false);
             menu = go;
         }
