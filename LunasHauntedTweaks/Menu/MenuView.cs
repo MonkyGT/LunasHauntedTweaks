@@ -1,4 +1,4 @@
-﻿using HMMLunasTweaks.Utils;
+using HMMLunasTweaks.Utils;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -159,7 +159,7 @@ namespace HMMLunasTweaks.Menu
                     {
                         mbt.EnabledColor = Config.LoadData($"cButtonButton{loopIndex} Config", "Enabled Colour", "The enabled colour for the button", enabledColor);
                         mbt.DisabledColor = Config.LoadData($"cButtonButton{loopIndex} Config", "Disabled Colour", "The disabled colour for the button", disabledColor);
-
+    
                         mbt.SetColour(false);
                         modButtonArray[loopIndex] = mbt;
                     }
@@ -242,7 +242,7 @@ namespace HMMLunasTweaks.Menu
             GameObject go = GameObject.CreatePrimitive(PrimitiveType.Cube);
             if (go == null)
                 return null;
-
+            go.GetComponent<Renderer>().material.color = Color.black;
             Collider col = go.GetComponent<BoxCollider>();
             if (col != null)
                 col.isTrigger = true;
