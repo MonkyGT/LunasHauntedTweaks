@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace HMMLunasTweaks.Buttons
@@ -23,7 +23,7 @@ namespace HMMLunasTweaks.Buttons
             if (ButtonMaterial == null)
                 return;
 
-            ButtonMaterial.SetColor("_Color", enabled ? EnabledColor : DisabledColor);
+            ButtonMaterial.color = enabled ? EnabledColor : DisabledColor;
         }
     }
 }
