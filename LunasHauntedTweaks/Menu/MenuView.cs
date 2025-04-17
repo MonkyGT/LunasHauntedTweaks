@@ -99,7 +99,7 @@ namespace HMMLunasTweaks.Menu
         {
             Debug.Log("loading menu");
 
-            gameObject.GetComponent<Renderer>()?.material?.SetColor("_Color", Config.LoadData("Button Menu Config", "Background Colour", "The colour for the background", Color.black));
+            gameObject.GetComponent<Renderer>()?.material?.color("_Color", Config.LoadData("Button Menu Config", "Background Colour", "The colour for the background", Color.black));
 
             RectTransform rect = gameObject.AddComponent<RectTransform>();
             Canvas canvas = gameObject.AddComponent<Canvas>();
